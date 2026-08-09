@@ -1,1242 +1,598 @@
-<!DOCTYPE html>
-<html lang="en">
+<style>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
 
-    <title>Vishal Ranjan Gupta | CAE Engineer</title>
+    html {
+        scroll-behavior: smooth;
+    }
 
-    <style>
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        background: #0b0f14;
+        color: #e8edf3;
+        line-height: 1.7;
+    }
 
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            background: #0b0f14;
-            color: #e8edf3;
-            line-height: 1.7;
-        }
-
-        a {
-            color: inherit;
-            text-decoration: none;
-        }
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
 
 
-        /* =========================
-           NAVIGATION
-        ========================= */
+    /* =========================
+       NAVIGATION
+    ========================= */
 
-        nav {
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            background: rgba(11, 15, 20, 0.97);
-            border-bottom: 1px solid #202833;
-            padding: 18px 4%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+    nav {
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        background: rgba(11, 15, 20, 0.97);
+        border-bottom: 1px solid #202833;
+        padding: 18px 4%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
 
-        .logo {
-            font-size: 20px;
-            font-weight: bold;
-        }
+    .logo {
+        font-size: 20px;
+        font-weight: bold;
+    }
 
-        .nav-links {
-            display: flex;
-            gap: 30px;
-            font-size: 15px;
-            color: #aeb8c5;
-        }
+    .nav-links {
+        display: flex;
+        gap: 30px;
+        font-size: 15px;
+        color: #aeb8c5;
+    }
 
-        .nav-links a:hover {
-            color: #ffffff;
-        }
-
-
-        /* =========================
-           HERO
-        ========================= */
-
-        .hero {
-            min-height: 82vh;
-            display: flex;
-            align-items: center;
-            padding: 80px 8%;
-            border-bottom: 1px solid #202833;
-        }
-
-        .hero-content {
-            width: 100%;
-            max-width: 1200px;
-        }
-
-        .hero h1 {
-    font-size: clamp(48px, 6vw, 78px);
-    line-height: 1.02;
-    letter-spacing: -2px;
-    margin-bottom: 25px;
-    white-space: nowrap;
-}
-
-        .hero h1 span {
-    display: block;
-    color: #8ea9c5;
-    font-size: 0.62em;
-    margin-top: 8px;
-    letter-spacing: -1px;
-}
-
-        .hero p {
-            max-width: 1050px;
-            font-size: 20px;
-            color: #aeb8c5;
-            margin-bottom: 34px;
-        }
-
-        .buttons {
-            display: flex;
-            gap: 15px;
-        }
-
-        .button {
-            padding: 12px 22px;
-            border: 1px solid #465363;
-            border-radius: 6px;
-            font-size: 15px;
-            transition: 0.2s ease;
-        }
-
-        .button:hover {
-            background: #151c25;
-            border-color: #718196;
-        }
+    .nav-links a:hover {
+        color: #ffffff;
+    }
 
 
-        /* =========================
-           HERO / CORE EXPERTISE
-        ========================= */
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero {
+        min-height: 82vh;
+        display: flex;
+        align-items: center;
+        padding: 80px 8%;
+        border-bottom: 1px solid #202833;
+    }
+
+    .hero-content {
+        width: 100%;
+        max-width: 1200px;
+    }
+
+    .hero h1 {
+        font-size: clamp(48px, 6vw, 78px);
+        line-height: 1.02;
+        letter-spacing: -2px;
+        margin-bottom: 25px;
+        white-space: nowrap;
+    }
+
+    .hero h1 span {
+        display: block;
+        color: #8ea9c5;
+        font-size: 0.62em;
+        margin-top: 8px;
+        letter-spacing: -1px;
+    }
+
+    .hero p {
+        max-width: 1050px;
+        font-size: 20px;
+        color: #aeb8c5;
+        margin-bottom: 34px;
+    }
+
+    .buttons {
+        display: flex;
+        gap: 15px;
+    }
+
+    .button {
+        padding: 12px 22px;
+        border: 1px solid #465363;
+        border-radius: 6px;
+        font-size: 15px;
+        transition: 0.2s ease;
+    }
+
+    .button:hover {
+        background: #151c25;
+        border-color: #718196;
+    }
+
+
+    /* =========================
+       HERO / CORE EXPERTISE
+    ========================= */
+
+    .hero-layout {
+        display: grid;
+        grid-template-columns: 1.5fr 0.75fr;
+        gap: 60px;
+        align-items: center;
+    }
+
+    .expertise-card {
+        border: 1px solid #27313d;
+        border-radius: 12px;
+        background: #0e141b;
+        padding: 34px;
+    }
+
+    .expertise-card h3 {
+        color: #8ea9c5;
+        font-size: 18px;
+        letter-spacing: 2px;
+        margin-bottom: 32px;
+    }
+
+    .expertise-item {
+        padding: 18px 0;
+        border-bottom: 1px solid #27313d;
+        font-size: 18px;
+    }
+
+    .expertise-item:last-child {
+        border-bottom: none;
+    }
+
+
+    /* =========================
+       GENERAL SECTIONS
+    ========================= */
+
+    section {
+        padding: 80px 4%;
+        border-bottom: 1px solid #202833;
+    }
+
+    .section-inner {
+        max-width: 1450px;
+        margin: 0 auto;
+    }
+
+    .section-title {
+        font-size: 32px;
+        margin-bottom: 30px;
+    }
+
+
+    /* =========================
+       ABOUT
+    ========================= */
+
+    .about-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 28px;
+    }
+
+    .about-card {
+        border: 1px solid #27313d;
+        padding: 30px;
+        border-radius: 10px;
+        background: #0e141b;
+    }
+
+    .about-card h3 {
+        margin-bottom: 15px;
+        font-size: 21px;
+    }
+
+    .about-card p {
+        color: #aeb8c5;
+    }
+
+
+    /* =========================
+       PROJECT HEADER
+    ========================= */
+
+    .project-header {
+        margin-bottom: 55px;
+    }
+
+    .project-header h3 {
+        font-size: clamp(24px, 3vw, 38px);
+        line-height: 1.15;
+        margin-bottom: 18px;
+        white-space: nowrap;
+    }
+
+
+    /* =========================
+       PROBLEM / OBJECTIVE
+    ========================= */
+
+    .problem-grid {
+        display: grid;
+        grid-template-columns: 1.3fr 0.7fr;
+        gap: 28px;
+        margin-bottom: 70px;
+    }
+
+    .content-card {
+        border: 1px solid #27313d;
+        border-radius: 10px;
+        padding: 30px;
+        background: #0e141b;
+    }
+
+    .content-card h4 {
+        font-size: 21px;
+        margin-bottom: 16px;
+    }
+
+    .content-card p {
+        color: #aeb8c5;
+    }
+
+
+    /* =========================
+       FE MODEL DEVELOPMENT
+    ========================= */
+
+    .fe-section {
+        margin-bottom: 70px;
+    }
+
+    .fe-section h3,
+    .explicit-section h3,
+    .trigger-section h3,
+    .results-section h3 {
+        font-size: 28px;
+        margin-bottom: 15px;
+    }
+
+    .fe-description {
+        width: 100%;
+        max-width: none;
+        color: #aeb8c5;
+        margin-bottom: 35px;
+    }
+
+    .fe-images {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 22px;
+    }
+
+    .image-card {
+        border: 1px solid #27313d;
+        border-radius: 10px;
+        background: #0e141b;
+        padding: 14px;
+        overflow: hidden;
+    }
+
+    .image-card img {
+        display: block;
+        width: 100%;
+        height: auto;
+        max-height: 430px;
+        object-fit: contain;
+        border-radius: 6px;
+        background: #0b0f14;
+    }
+
+    .image-caption {
+        padding: 15px 7px 6px;
+        color: #c4ced9;
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .image-caption strong {
+        display: block;
+        color: #e8edf3;
+        margin-bottom: 4px;
+    }
+
+
+    /* =========================
+       EXPLICIT SIMULATION
+    ========================= */
+
+    .explicit-section {
+        margin-bottom: 70px;
+    }
+
+    .explicit-intro {
+        width: 100%;
+        max-width: none;
+        color: #aeb8c5;
+        margin-bottom: 30px;
+    }
+
+    .explicit-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 22px;
+    }
+
+    .explicit-card {
+        border: 1px solid #27313d;
+        border-radius: 10px;
+        padding: 30px;
+        background: #0e141b;
+    }
+
+    .explicit-card h4 {
+        font-size: 21px;
+        margin-bottom: 16px;
+    }
+
+    .explicit-card ul {
+        padding-left: 20px;
+        color: #aeb8c5;
+    }
+
+    .explicit-card li {
+        margin-bottom: 9px;
+    }
+
+
+    /* =========================
+       TRIGGER CONFIGURATIONS
+    ========================= */
+
+    .trigger-section {
+        margin-bottom: 70px;
+    }
+
+    .trigger-description {
+        width: 100%;
+        max-width: none;
+        color: #aeb8c5;
+        margin-bottom: 30px;
+    }
+
+    .trigger-image {
+        width: 100%;
+        border: 1px solid #27313d;
+        border-radius: 10px;
+        background: #0e141b;
+        padding: 16px;
+        overflow: hidden;
+    }
+
+    .trigger-image img {
+        display: block;
+        width: 100%;
+        max-width: 1250px;
+        height: auto;
+        margin: 0 auto;
+        object-fit: contain;
+        border-radius: 7px;
+    }
+
+
+    /* =========================
+       RESULTS
+    ========================= */
+
+    .results-section {
+        margin-bottom: 25px;
+    }
+
+    .results-description {
+        width: 100%;
+        max-width: none;
+        color: #aeb8c5;
+        margin-bottom: 30px;
+    }
+
+    .result-image {
+        width: 100%;
+        border: 1px solid #27313d;
+        border-radius: 10px;
+        background: #0e141b;
+        padding: 15px;
+    }
+
+    .result-image img {
+        display: block;
+        width: 100%;
+        max-width: 1250px;
+        height: auto;
+        margin: 0 auto;
+        object-fit: contain;
+        border-radius: 7px;
+    }
+
+
+    /* =========================
+       CRASHWORTHINESS METRICS
+    ========================= */
+
+    .metrics {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 14px;
+        margin-top: 24px;
+    }
+
+    .metric {
+        border: 1px solid #27313d;
+        border-radius: 8px;
+        background: #0e141b;
+        padding: 24px 15px;
+        text-align: center;
+    }
+
+    .metric strong {
+        display: block;
+        font-size: 23px;
+        margin-bottom: 10px;
+        color: #e8edf3;
+    }
+
+    .metric span {
+        color: #8ea9c5;
+        font-size: 14px;
+    }
+
+
+    /* =========================
+       KEY FINDINGS
+    ========================= */
+
+    .findings {
+        display: grid;
+        gap: 16px;
+        max-width: 1300px;
+    }
+
+    .finding {
+        padding: 20px 25px;
+        border: 1px solid #27313d;
+        border-left: 3px solid #6f9ac8;
+        border-radius: 7px;
+        background: #0e141b;
+        color: #bfc9d5;
+    }
+
+
+    /* =========================
+       SKILLS
+    ========================= */
+
+    .skills {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        max-width: 1200px;
+    }
+
+    .skill {
+        padding: 10px 15px;
+        border: 1px solid #303b48;
+        border-radius: 6px;
+        color: #c7d0da;
+        background: #0e141b;
+    }
+
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+        padding: 45px 7%;
+        color: #7f8b99;
+        font-size: 14px;
+        text-align: center;
+    }
+
+
+    /* =========================
+       RESPONSIVE
+    ========================= */
+
+    @media (max-width: 1100px) {
 
         .hero-layout {
-            display: grid;
-            grid-template-columns: 1.5fr 0.75fr;
-            gap: 60px;
-            align-items: center;
+            grid-template-columns: 1fr;
+            gap: 45px;
         }
-
-        .expertise-card {
-            border: 1px solid #27313d;
-            border-radius: 12px;
-            background: #0e141b;
-            padding: 34px;
-        }
-
-        .expertise-card h3 {
-            color: #8ea9c5;
-            font-size: 18px;
-            letter-spacing: 2px;
-            margin-bottom: 32px;
-        }
-
-        .expertise-item {
-            padding: 18px 0;
-            border-bottom: 1px solid #27313d;
-            font-size: 18px;
-        }
-
-        .expertise-item:last-child {
-            border-bottom: none;
-        }
-
-
-        /* =========================
-           GENERAL SECTIONS
-        ========================= */
-
-        section {
-            padding: 80px 4%;
-            border-bottom: 1px solid #202833;
-        }
-
-        .section-inner {
-            max-width: 1450px;
-            margin: 0 auto;
-        }
-
-        .section-title {
-            font-size: 32px;
-            margin-bottom: 30px;
-        }
-
-
-        /* =========================
-           ABOUT
-        ========================= */
-
-        .about-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 28px;
-        }
-
-        .about-card {
-            border: 1px solid #27313d;
-            padding: 30px;
-            border-radius: 10px;
-            background: #0e141b;
-        }
-
-        .about-card h3 {
-            margin-bottom: 15px;
-            font-size: 21px;
-        }
-
-        .about-card p {
-            color: #aeb8c5;
-        }
-
-
-        /* =========================
-           PROJECT HEADER
-        ========================= */
-
-        .project-header {
-            margin-bottom: 55px;
-        }
-
-.project-header h3 {
-    font-size: clamp(24px, 3vw, 38px);
-    line-height: 1.15;
-    margin-bottom: 18px;
-    white-space: nowrap;
-}
-
-
-        /* =========================
-           PROBLEM / OBJECTIVE
-        ========================= */
 
         .problem-grid {
-            display: grid;
-            grid-template-columns: 1.3fr 0.7fr;
-            gap: 28px;
-            margin-bottom: 70px;
-        }
-
-        .content-card {
-            border: 1px solid #27313d;
-            border-radius: 10px;
-            padding: 30px;
-            background: #0e141b;
-        }
-
-        .content-card h4 {
-            font-size: 21px;
-            margin-bottom: 16px;
-        }
-
-        .content-card p {
-            color: #aeb8c5;
-        }
-
-
-        /* =========================
-           FE MODEL DEVELOPMENT
-        ========================= */
-
-        .fe-section {
-            margin-bottom: 70px;
-        }
-
-        .fe-section h3,
-        .explicit-section h3,
-        .trigger-section h3,
-        .results-section h3 {
-            font-size: 28px;
-            margin-bottom: 15px;
-        }
-
-        .fe-description {
-            max-width: 1100px;
-            color: #aeb8c5;
-            margin-bottom: 35px;
+            grid-template-columns: 1fr;
         }
 
         .fe-images {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 22px;
-        }
-
-        .image-card {
-            border: 1px solid #27313d;
-            border-radius: 10px;
-            background: #0e141b;
-            padding: 14px;
-            overflow: hidden;
-        }
-
-        .image-card img {
-            display: block;
-            width: 100%;
-            height: auto;
-            max-height: 430px;
-            object-fit: contain;
-            border-radius: 6px;
-            background: #0b0f14;
-        }
-
-        .image-caption {
-            padding: 15px 7px 6px;
-            color: #c4ced9;
-            font-size: 14px;
-            text-align: center;
-        }
-
-        .image-caption strong {
-            display: block;
-            color: #e8edf3;
-            margin-bottom: 4px;
-        }
-
-
-        /* =========================
-           EXPLICIT SIMULATION
-        ========================= */
-
-        .explicit-section {
-            margin-bottom: 70px;
-        }
-
-        .explicit-intro {
-            max-width: 1100px;
-            color: #aeb8c5;
-            margin-bottom: 30px;
+            grid-template-columns: 1fr;
         }
 
         .explicit-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 22px;
+            grid-template-columns: 1fr;
         }
-
-        .explicit-card {
-            border: 1px solid #27313d;
-            border-radius: 10px;
-            padding: 30px;
-            background: #0e141b;
-        }
-
-        .explicit-card h4 {
-            font-size: 21px;
-            margin-bottom: 16px;
-        }
-
-        .explicit-card ul {
-            padding-left: 20px;
-            color: #aeb8c5;
-        }
-
-        .explicit-card li {
-            margin-bottom: 9px;
-        }
-
-
-        /* =========================
-           TRIGGER CONFIGURATIONS
-        ========================= */
-
-        .trigger-section {
-            margin-bottom: 70px;
-        }
-
-        .trigger-description {
-            max-width: 1100px;
-            color: #aeb8c5;
-            margin-bottom: 30px;
-        }
-
-        .trigger-image {
-            width: 100%;
-            border: 1px solid #27313d;
-            border-radius: 10px;
-            background: #0e141b;
-            padding: 16px;
-            overflow: hidden;
-        }
-
-        .trigger-image img {
-            display: block;
-            width: 100%;
-            max-width: 1250px;
-            height: auto;
-            margin: 0 auto;
-            object-fit: contain;
-            border-radius: 7px;
-        }
-
-
-        /* =========================
-           RESULTS
-        ========================= */
-
-        .results-section {
-            margin-bottom: 25px;
-        }
-
-        .results-description {
-            max-width: 1100px;
-            color: #aeb8c5;
-            margin-bottom: 30px;
-        }
-
-        .result-image {
-            width: 100%;
-            border: 1px solid #27313d;
-            border-radius: 10px;
-            background: #0e141b;
-            padding: 15px;
-        }
-
-        .result-image img {
-            display: block;
-            width: 100%;
-            max-width: 1250px;
-            height: auto;
-            margin: 0 auto;
-            object-fit: contain;
-            border-radius: 7px;
-        }
-
-
-        /* =========================
-           CRASHWORTHINESS METRICS
-        ========================= */
 
         .metrics {
-            display: grid;
-            grid-template-columns: repeat(5, 1fr);
-            gap: 14px;
-            margin-top: 24px;
+            grid-template-columns: repeat(2, 1fr);
         }
 
-        .metric {
-            border: 1px solid #27313d;
-            border-radius: 8px;
-            background: #0e141b;
-            padding: 24px 15px;
-            text-align: center;
+        .project-header h3 {
+            white-space: normal;
+        }
+    }
+
+
+    @media (max-width: 800px) {
+
+        nav {
+            padding: 16px 5%;
         }
 
-        .metric strong {
-            display: block;
-            font-size: 23px;
-            margin-bottom: 10px;
-            color: #e8edf3;
+        .nav-links {
+            display: none;
         }
 
-        .metric span {
-            color: #8ea9c5;
-            font-size: 14px;
+        .hero {
+            min-height: 75vh;
+            padding: 65px 7%;
         }
 
-
-        /* =========================
-           KEY FINDINGS
-        ========================= */
-
-        .findings {
-            display: grid;
-            gap: 16px;
-            max-width: 1300px;
+        .hero h1 {
+            font-size: clamp(42px, 11vw, 64px);
+            letter-spacing: -1px;
+            white-space: normal;
         }
 
-        .finding {
-            padding: 20px 25px;
-            border: 1px solid #27313d;
-            border-left: 3px solid #6f9ac8;
-            border-radius: 7px;
-            background: #0e141b;
-            color: #bfc9d5;
+        .hero p {
+            font-size: 17px;
         }
 
-
-        /* =========================
-           SKILLS
-        ========================= */
-
-        .skills {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-            max-width: 1200px;
+        section {
+            padding: 65px 5%;
         }
 
-        .skill {
-            padding: 10px 15px;
-            border: 1px solid #303b48;
-            border-radius: 6px;
-            color: #c7d0da;
-            background: #0e141b;
+        .about-grid {
+            grid-template-columns: 1fr;
         }
 
-
-        /* =========================
-           FOOTER
-        ========================= */
-
-        footer {
-            padding: 45px 7%;
-            color: #7f8b99;
-            font-size: 14px;
-            text-align: center;
+        .section-title {
+            font-size: 28px;
         }
 
-
-        /* =========================
-           RESPONSIVE
-        ========================= */
-
-        @media (max-width: 1100px) {
-
-            .hero-layout {
-                grid-template-columns: 1fr;
-                gap: 45px;
-            }
-
-            .problem-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .fe-images {
-                grid-template-columns: 1fr;
-            }
-
-            .explicit-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .metrics {
-                grid-template-columns: repeat(2, 1fr);
-            }
+        .project-header h3 {
+            font-size: 30px;
+            white-space: normal;
         }
 
+        .metrics {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
 
-        @media (max-width: 800px) {
 
-            nav {
-                padding: 16px 5%;
-            }
+    @media (max-width: 520px) {
 
-            .nav-links {
-                display: none;
-            }
-
-            .hero {
-                min-height: 75vh;
-                padding: 65px 7%;
-            }
-
-            .hero h1 {
-                font-size: clamp(42px, 11vw, 64px);
-                letter-spacing: -1px;
-            }
-
-            .hero p {
-                font-size: 17px;
-            }
-
-            section {
-                padding: 65px 5%;
-            }
-
-            .about-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .section-title {
-                font-size: 28px;
-            }
-
-            .project-header h3 {
-                font-size: 30px;
-            }
-
-            .metrics {
-                grid-template-columns: 1fr 1fr;
-            }
+        .metrics {
+            grid-template-columns: 1fr;
         }
 
-
-        @media (max-width: 520px) {
-
-            .metrics {
-                grid-template-columns: 1fr;
-            }
-
-            .expertise-card {
-                padding: 25px;
-            }
-
-            .expertise-item {
-                font-size: 16px;
-            }
+        .expertise-card {
+            padding: 25px;
         }
 
-    </style>
-</head>
-
-
-<body>
-
-
-    <!-- =========================
-         NAVIGATION
-    ========================= -->
-
-    <nav>
-
-        <div class="logo">
-            Vishal Ranjan Gupta
-        </div>
-
-        <div class="nav-links">
-            <a href="#about">About</a>
-            <a href="#project">Project</a>
-            <a href="#skills">Skills</a>
-            <a href="#findings">Findings</a>
-        </div>
-
-    </nav>
-
-
-    <!-- =========================
-         HERO
-    ========================= -->
-
-    <header class="hero">
-
-        <div class="hero-content">
-
-            <div class="hero-layout">
-
-                <div>
-
-                    <h1>
-                        Vishal Ranjan Gupta
-                        <span>CAE Engineer</span>
-                    </h1>
-
-                    <p>
-                        Recently completed a Master’s Degree in Design Engineering
-                        from BITS Pilani, Hyderabad Campus, with hands-on experience
-                        in FEA, CFD, explicit dynamics, crashworthiness, and
-                        engineering simulation.
-                    </p>
-
-                    <div class="buttons">
-
-                        <a class="button" href="#project">
-                            View Project
-                        </a>
-
-                        <a class="button" href="#about">
-                            About Me
-                        </a>
-
-                    </div>
-
-                </div>
-
-
-                <!-- CORE EXPERTISE -->
-
-                <div class="expertise-card">
-
-                    <h3>CORE EXPERTISE</h3>
-
-                    <div class="expertise-item">
-                        FEA &amp; Structural Analysis
-                    </div>
-
-                    <div class="expertise-item">
-                        Explicit Dynamics
-                    </div>
-
-                    <div class="expertise-item">
-                        Crashworthiness
-                    </div>
-
-                    <div class="expertise-item">
-                        CFD
-                    </div>
-
-                    <div class="expertise-item">
-                        Pre / Post Processing
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </header>
-
-
-    <!-- =========================
-         ABOUT
-    ========================= -->
-
-    <section id="about">
-
-        <div class="section-inner">
-
-            <h2 class="section-title">
-                About
-            </h2>
-
-            <div class="about-grid">
-
-                <div class="about-card">
-
-                    <h3>Background</h3>
-
-                    <p>
-                        My academic work has focused on computational mechanics
-                        and engineering simulation, with projects covering
-                        structural analysis, CFD, vibration, and crashworthiness.
-                    </p>
-
-                </div>
-
-
-                <div class="about-card">
-
-                    <h3>Engineering Focus</h3>
-
-                    <p>
-                        Focused on CAE, finite element analysis, CFD, explicit
-                        dynamics, crashworthiness, and simulation-based
-                        mechanical engineering.
-                    </p>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- =========================
-         PROJECT
-    ========================= -->
-
-    <section id="project">
-
-        <div class="section-inner">
-
-
-            <!-- PROJECT TITLE -->
-
-            <div class="project-header">
-
-                <h2 class="section-title">
-                    Featured Project
-                </h2>
-
-                <h3>
-                    Axial Impact Crashworthiness Analysis of Steel Automotive Crash Box
-                </h3>
-
-            </div>
-
-
-            <!-- =========================
-                 PROBLEM / OBJECTIVE
-            ========================= -->
-
-            <div class="problem-grid">
-
-                <div class="content-card">
-
-                    <h4>The Problem</h4>
-
-                    <p>
-                        During a vehicle crash, the crash box is designed to
-                        absorb impact energy through controlled deformation
-                        while limiting the peak force transmitted to the
-                        vehicle structure. However, an unmodified crash box
-                        may experience high initial crushing forces and
-                        undesirable deformation modes, affecting its energy
-                        absorption performance. Geometric triggers can be
-                        introduced to initiate and control the folding
-                        behaviour, but their design must be carefully
-                        evaluated to achieve stable deformation and effective
-                        energy absorption. Therefore, numerical simulation is
-                        used to investigate the influence of circular hole
-                        triggers on the crashworthiness and deformation
-                        behaviour of the crash box under axial impact.
-                    </p>
-
-                </div>
-
-
-                <div class="content-card">
-
-                    <h4>Objective</h4>
-
-                    <p>
-                        To investigate the influence of circular hole triggers
-                        of different diameters on the deformation behaviour
-                        and crashworthiness performance of a steel automotive
-                        crash box subjected to axial impact.
-                    </p>
-
-                </div>
-
-            </div>
-
-
-            <!-- =========================
-                 FE MODEL DEVELOPMENT
-            ========================= -->
-
-            <div class="fe-section">
-
-                <h3>
-                    FE Model Development
-                </h3>
-
-                <p class="fe-description">
-                    The crash box was developed as a finite element model
-                    for axial impact analysis. The model incorporated a
-                    structured shell mesh, appropriate boundary conditions,
-                    and local mesh refinement around the trigger region.
-                </p>
-
-
-                <div class="fe-images">
-
-
-                    <!-- IMAGE 1 -->
-
-                    <div class="image-card">
-
-                        <img
-                            src="images/fe-model.png"
-                            alt="Crash box finite element model">
-
-                        <div class="image-caption">
-
-                            <strong>
-                                Crash Box FE Model
-                            </strong>
-
-                            Finite element model of the crash box.
-
-                        </div>
-
-                    </div>
-
-
-                    <!-- IMAGE 2 -->
-
-                    <div class="image-card">
-
-                        <img
-                            src="images/impact-setup.png"
-                            alt="Axial impact simulation setup">
-
-                        <div class="image-caption">
-
-                            <strong>
-                                Axial Impact Simulation Setup
-                            </strong>
-
-                            Impactor and boundary-condition setup for axial impact.
-
-                        </div>
-
-                    </div>
-
-
-                    <!-- IMAGE 3 -->
-
-                    <div class="image-card">
-
-                        <img
-                            src="images/mesh-hole-trigger.png"
-                            alt="Mapped O-grid mesh around trigger region">
-
-                        <div class="image-caption">
-
-                            <strong>
-                                Mapped / O-grid Mesh
-                            </strong>
-
-                            Local mesh refinement around the trigger region.
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <!-- =========================
-                 EXPLICIT SIMULATION
-            ========================= -->
-
-            <div class="explicit-section">
-
-                <h3>
-                    Explicit Simulation
-                </h3>
-
-                <p class="explicit-intro">
-                    The crashworthiness analysis was performed using the
-                    LS-DYNA explicit dynamic solver to investigate the
-                    deformation response of the crash box during axial impact.
-                </p>
-
-
-                <div class="explicit-grid">
-
-
-                    <div class="explicit-card">
-
-                        <h4>
-                            Simulation Approach
-                        </h4>
-
-                        <ul>
-
-                            <li>
-                                Explicit dynamic analysis
-                            </li>
-
-                            <li>
-                                Axial impact loading
-                            </li>
-
-                            <li>
-                                Contact-based interaction
-                            </li>
-
-                            <li>
-                                Progressive crushing response
-                            </li>
-
-                        </ul>
-
-                    </div>
-
-
-                    <div class="explicit-card">
-
-                        <h4>
-                            Response Evaluated
-                        </h4>
-
-                        <ul>
-
-                            <li>
-                                Deformation behaviour
-                            </li>
-
-                            <li>
-                                Crushing force response
-                            </li>
-
-                            <li>
-                                Energy absorption
-                            </li>
-
-                            <li>
-                                Crashworthiness performance
-                            </li>
-
-                        </ul>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <!-- =========================
-                 TRIGGER CONFIGURATIONS
-            ========================= -->
-
-            <div class="trigger-section">
-
-                <h3>
-                    Trigger Configurations
-                </h3>
-
-                <p class="trigger-description">
-                    Circular hole triggers of different diameters were
-                    introduced to investigate their influence on the
-                    deformation behaviour and crashworthiness response
-                    of the crash box.
-                </p>
-
-
-                <div class="trigger-image">
-
-                    <img
-                        src="images/trigger-configurations.png"
-                        alt="Crash box trigger configurations before and after impact">
-
-                </div>
-
-            </div>
-
-
-            <!-- =========================
-                 RESULTS
-            ========================= -->
-
-            <div class="results-section">
-
-                <h3>
-                    Crashworthiness Evaluation
-                </h3>
-
-                <p class="results-description">
-                    The crash-box configurations were evaluated using the
-                    crushing force–displacement response and energy-based
-                    crashworthiness metrics.
-                </p>
-
-
-                <div class="result-image">
-
-                    <img
-                        src="images/force-displacement.png"
-                        alt="Crushing force versus displacement response">
-
-                </div>
-
-
-                <!-- METRICS -->
-
-                <div class="metrics">
-
-
-                    <div class="metric">
-
-                        <strong>
-                            IE
-                        </strong>
-
-                        <span>
-                            Internal Energy
-                        </span>
-
-                    </div>
-
-
-                    <div class="metric">
-
-                        <strong>
-                            SEA
-                        </strong>
-
-                        <span>
-                            Specific Energy Absorption
-                        </span>
-
-                    </div>
-
-
-                    <div class="metric">
-
-                        <strong>
-                            Fmax
-                        </strong>
-
-                        <span>
-                            Peak Crushing Force
-                        </span>
-
-                    </div>
-
-
-                    <div class="metric">
-
-                        <strong>
-                            MCF
-                        </strong>
-
-                        <span>
-                            Mean Crushing Force
-                        </span>
-
-                    </div>
-
-
-                    <div class="metric">
-
-                        <strong>
-                            CFE
-                        </strong>
-
-                        <span>
-                            Crushing Force Efficiency
-                        </span>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- =========================
-         KEY FINDINGS
-    ========================= -->
-
-    <section id="findings">
-
-        <div class="section-inner">
-
-            <h2 class="section-title">
-                Key Findings
-            </h2>
-
-
-            <div class="findings">
-
-
-                <div class="finding">
-                    Hole triggers reduced the initial peak crushing force
-                    and promoted more controlled, progressive deformation.
-                </div>
-
-
-                <div class="finding">
-                    The Ø12 mm and Ø14 mm trigger configurations showed a
-                    favourable balance between energy absorption and
-                    crushing behaviour.
-                </div>
-
-
-                <div class="finding">
-                    Larger trigger sizes showed increased structural
-                    weakening and less stable deformation.
-                </div>
-
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- =========================
-         TECHNICAL SKILLS
-    ========================= -->
-
-    <section id="skills">
-
-        <div class="section-inner">
-
-            <h2 class="section-title">
-                Technical Skills
-            </h2>
-
-
-            <div class="skills">
-
-                <div class="skill">
-                    LS-DYNA
-                </div>
-
-                <div class="skill">
-                    FEA
-                </div>
-
-                <div class="skill">
-                    Explicit Dynamics
-                </div>
-
-                <div class="skill">
-                    Crashworthiness
-                </div>
-
-                <div class="skill">
-                    ANSYS Mechanical
-                </div>
-
-                <div class="skill">
-                    ANSYS Fluent
-                </div>
-
-                <div class="skill">
-                    Abaqus
-                </div>
-
-                <div class="skill">
-                    HyperMesh
-                </div>
-
-                <div class="skill">
-                    Pre / Post Processing
-                </div>
-
-                <div class="skill">
-                    Meshing
-                </div>
-
-                <div class="skill">
-                    Structural Analysis
-                </div>
-
-                <div class="skill">
-                    CFD
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- =========================
-         FOOTER
-    ========================= -->
-
-    <footer>
-
-        © 2026 Vishal Ranjan Gupta · CAE Engineer
-
-    </footer>
-
-
-</body>
-
-</html>
+        .expertise-item {
+            font-size: 16px;
+        }
+    }
+
+</style>
