@@ -8,6 +8,7 @@
     <title>Vishal Ranjan Gupta | CAE Engineer</title>
 
     <style>
+
         * {
             box-sizing: border-box;
             margin: 0;
@@ -30,6 +31,7 @@
             text-decoration: none;
         }
 
+
         /* =========================
            NAVIGATION
         ========================= */
@@ -38,7 +40,7 @@
             position: sticky;
             top: 0;
             z-index: 100;
-            background: rgba(11, 15, 20, 0.96);
+            background: rgba(11, 15, 20, 0.97);
             border-bottom: 1px solid #202833;
             padding: 18px 4%;
             display: flex;
@@ -49,19 +51,19 @@
         .logo {
             font-size: 20px;
             font-weight: bold;
-            letter-spacing: 0.3px;
         }
 
         .nav-links {
             display: flex;
             gap: 30px;
-            font-size: 14px;
+            font-size: 15px;
             color: #aeb8c5;
         }
 
         .nav-links a:hover {
             color: #ffffff;
         }
+
 
         /* =========================
            HERO
@@ -77,19 +79,23 @@
 
         .hero-content {
             width: 100%;
-            max-width: 1150px;
+            max-width: 1200px;
         }
 
         .hero h1 {
-            font-size: clamp(48px, 7vw, 88px);
+            font-size: clamp(48px, 6vw, 78px);
             line-height: 1.02;
-            margin-bottom: 24px;
             letter-spacing: -2px;
+            margin-bottom: 25px;
+            white-space: nowrap;
         }
 
         .hero h1 span {
             display: block;
             color: #8ea9c5;
+            font-size: 0.62em;
+            margin-top: 8px;
+            letter-spacing: -1px;
         }
 
         .hero p {
@@ -102,11 +108,9 @@
         .buttons {
             display: flex;
             gap: 15px;
-            flex-wrap: wrap;
         }
 
         .button {
-            display: inline-block;
             padding: 12px 22px;
             border: 1px solid #465363;
             border-radius: 6px;
@@ -118,6 +122,43 @@
             background: #151c25;
             border-color: #718196;
         }
+
+
+        /* =========================
+           HERO / CORE EXPERTISE
+        ========================= */
+
+        .hero-layout {
+            display: grid;
+            grid-template-columns: 1.5fr 0.75fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .expertise-card {
+            border: 1px solid #27313d;
+            border-radius: 12px;
+            background: #0e141b;
+            padding: 34px;
+        }
+
+        .expertise-card h3 {
+            color: #8ea9c5;
+            font-size: 18px;
+            letter-spacing: 2px;
+            margin-bottom: 32px;
+        }
+
+        .expertise-item {
+            padding: 18px 0;
+            border-bottom: 1px solid #27313d;
+            font-size: 18px;
+        }
+
+        .expertise-item:last-child {
+            border-bottom: none;
+        }
+
 
         /* =========================
            GENERAL SECTIONS
@@ -135,14 +176,9 @@
 
         .section-title {
             font-size: 32px;
-            margin-bottom: 28px;
+            margin-bottom: 30px;
         }
 
-        .section-intro {
-            max-width: 1050px;
-            color: #aeb8c5;
-            margin-bottom: 35px;
-        }
 
         /* =========================
            ABOUT
@@ -162,13 +198,14 @@
         }
 
         .about-card h3 {
-            margin-bottom: 14px;
+            margin-bottom: 15px;
             font-size: 21px;
         }
 
         .about-card p {
             color: #aeb8c5;
         }
+
 
         /* =========================
            PROJECT HEADER
@@ -179,16 +216,12 @@
         }
 
         .project-header h3 {
-            font-size: clamp(28px, 4vw, 42px);
-            line-height: 1.2;
+            font-size: clamp(24px, 3vw, 38px);
+            line-height: 1.15;
             margin-bottom: 18px;
+            white-space: nowrap;
         }
 
-        .project-header p {
-            color: #aeb8c5;
-            max-width: 1100px;
-            font-size: 17px;
-        }
 
         /* =========================
            PROBLEM / OBJECTIVE
@@ -198,7 +231,7 @@
             display: grid;
             grid-template-columns: 1.3fr 0.7fr;
             gap: 28px;
-            margin-bottom: 65px;
+            margin-bottom: 70px;
         }
 
         .content-card {
@@ -217,13 +250,13 @@
             color: #aeb8c5;
         }
 
+
         /* =========================
            FE MODEL DEVELOPMENT
         ========================= */
 
         .fe-section {
-            margin-top: 10px;
-            margin-bottom: 65px;
+            margin-bottom: 70px;
         }
 
         .fe-section h3,
@@ -235,18 +268,10 @@
         }
 
         .fe-description {
-            max-width: 1050px;
+            width: 100%;
+            max-width: none;
             color: #aeb8c5;
-            margin-bottom: 28px;
-        }
-
-        .fe-points {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 12px 45px;
             margin-bottom: 35px;
-            padding-left: 20px;
-            color: #b9c3cf;
         }
 
         .fe-images {
@@ -283,21 +308,23 @@
         .image-caption strong {
             display: block;
             color: #e8edf3;
-            margin-bottom: 3px;
+            margin-bottom: 4px;
         }
+
 
         /* =========================
            EXPLICIT SIMULATION
         ========================= */
 
         .explicit-section {
-            margin-bottom: 65px;
+            margin-bottom: 70px;
         }
 
         .explicit-intro {
-            max-width: 1050px;
+            width: 100%;
+            max-width: none;
             color: #aeb8c5;
-            margin-bottom: 28px;
+            margin-bottom: 30px;
         }
 
         .explicit-grid {
@@ -309,13 +336,13 @@
         .explicit-card {
             border: 1px solid #27313d;
             border-radius: 10px;
-            padding: 28px;
+            padding: 30px;
             background: #0e141b;
         }
 
         .explicit-card h4 {
-            font-size: 20px;
-            margin-bottom: 15px;
+            font-size: 21px;
+            margin-bottom: 16px;
         }
 
         .explicit-card ul {
@@ -324,31 +351,31 @@
         }
 
         .explicit-card li {
-            margin-bottom: 8px;
+            margin-bottom: 9px;
         }
+
 
         /* =========================
            TRIGGER CONFIGURATIONS
         ========================= */
 
         .trigger-section {
-            margin-top: 0;
-            margin-bottom: 65px;
+            margin-bottom: 70px;
         }
 
         .trigger-description {
-            max-width: 1050px;
+            width: 100%;
+            max-width: none;
             color: #aeb8c5;
-            margin-bottom: 28px;
+            margin-bottom: 30px;
         }
 
         .trigger-image {
             width: 100%;
-            text-align: center;
             border: 1px solid #27313d;
             border-radius: 10px;
             background: #0e141b;
-            padding: 15px;
+            padding: 16px;
             overflow: hidden;
         }
 
@@ -362,24 +389,24 @@
             border-radius: 7px;
         }
 
+
         /* =========================
            RESULTS
         ========================= */
 
         .results-section {
-            margin-top: 0;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
         }
 
         .results-description {
-            max-width: 1050px;
+            width: 100%;
+            max-width: none;
             color: #aeb8c5;
-            margin-bottom: 28px;
+            margin-bottom: 30px;
         }
 
         .result-image {
             width: 100%;
-            text-align: center;
             border: 1px solid #27313d;
             border-radius: 10px;
             background: #0e141b;
@@ -396,14 +423,47 @@
             border-radius: 7px;
         }
 
+
         /* =========================
-           FINDINGS
+           CRASHWORTHINESS METRICS
+        ========================= */
+
+        .metrics {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 14px;
+            margin-top: 24px;
+        }
+
+        .metric {
+            border: 1px solid #27313d;
+            border-radius: 8px;
+            background: #0e141b;
+            padding: 24px 15px;
+            text-align: center;
+        }
+
+        .metric strong {
+            display: block;
+            font-size: 23px;
+            margin-bottom: 10px;
+            color: #e8edf3;
+        }
+
+        .metric span {
+            color: #8ea9c5;
+            font-size: 14px;
+        }
+
+
+        /* =========================
+           KEY FINDINGS
         ========================= */
 
         .findings {
             display: grid;
             gap: 16px;
-            max-width: 1250px;
+            max-width: 1300px;
         }
 
         .finding {
@@ -415,9 +475,6 @@
             color: #bfc9d5;
         }
 
-        .finding strong {
-            color: #e8edf3;
-        }
 
         /* =========================
            SKILLS
@@ -438,6 +495,7 @@
             background: #0e141b;
         }
 
+
         /* =========================
            FOOTER
         ========================= */
@@ -449,18 +507,16 @@
             text-align: center;
         }
 
+
         /* =========================
            RESPONSIVE
         ========================= */
 
-        @media (max-width: 1000px) {
+        @media (max-width: 1100px) {
 
-            .hero {
-                padding: 70px 7%;
-            }
-
-            .hero h1 {
-                font-size: clamp(46px, 8vw, 72px);
+            .hero-layout {
+                grid-template-columns: 1fr;
+                gap: 45px;
             }
 
             .problem-grid {
@@ -474,7 +530,12 @@
             .explicit-grid {
                 grid-template-columns: 1fr;
             }
+
+            .metrics {
+                grid-template-columns: repeat(2, 1fr);
+            }
         }
+
 
         @media (max-width: 800px) {
 
@@ -508,29 +569,52 @@
                 grid-template-columns: 1fr;
             }
 
-            .fe-points {
-                grid-template-columns: 1fr;
-            }
-
             .section-title {
                 font-size: 28px;
             }
 
             .project-header h3 {
                 font-size: 30px;
+                white-space: normal;
+            }
+
+            .metrics {
+                grid-template-columns: 1fr 1fr;
             }
         }
+
+
+        @media (max-width: 520px) {
+
+            .metrics {
+                grid-template-columns: 1fr;
+            }
+
+            .expertise-card {
+                padding: 25px;
+            }
+
+            .expertise-item {
+                font-size: 16px;
+            }
+        }
+
     </style>
 </head>
 
+
 <body>
+
 
     <!-- =========================
          NAVIGATION
     ========================= -->
 
     <nav>
-        <div class="logo">Vishal Ranjan Gupta</div>
+
+        <div class="logo">
+            Vishal Ranjan Gupta
+        </div>
 
         <div class="nav-links">
             <a href="#about">About</a>
@@ -538,6 +622,7 @@
             <a href="#skills">Skills</a>
             <a href="#findings">Findings</a>
         </div>
+
     </nav>
 
 
@@ -549,20 +634,65 @@
 
         <div class="hero-content">
 
-            <h1>
-                Vishal Ranjan Gupta
-                <span>CAE Engineer</span>
-            </h1>
+            <div class="hero-layout">
 
-            <p>
-                Recently completed a Master’s Degree in Design Engineering from
-                BITS Pilani, Hyderabad Campus, with hands-on experience in FEA,
-                CFD, explicit dynamics, crashworthiness, and engineering simulation.
-            </p>
+                <div>
 
-            <div class="buttons">
-                <a class="button" href="#project">View Project</a>
-                <a class="button" href="#about">About Me</a>
+                    <h1>
+                        Vishal Ranjan Gupta
+                        <span>CAE Engineer</span>
+                    </h1>
+
+                    <p>
+                        Recently completed a Master’s Degree in Design Engineering
+                        from BITS Pilani, Hyderabad Campus, with hands-on experience
+                        in FEA, CFD, explicit dynamics, crashworthiness, and
+                        engineering simulation.
+                    </p>
+
+                    <div class="buttons">
+
+                        <a class="button" href="#project">
+                            View Project
+                        </a>
+
+                        <a class="button" href="#about">
+                            About Me
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- CORE EXPERTISE -->
+
+                <div class="expertise-card">
+
+                    <h3>CORE EXPERTISE</h3>
+
+                    <div class="expertise-item">
+                        FEA &amp; Structural Analysis
+                    </div>
+
+                    <div class="expertise-item">
+                        Explicit Dynamics
+                    </div>
+
+                    <div class="expertise-item">
+                        Crashworthiness
+                    </div>
+
+                    <div class="expertise-item">
+                        CFD
+                    </div>
+
+                    <div class="expertise-item">
+                        Pre / Post Processing
+                    </div>
+
+                </div>
+
             </div>
 
         </div>
@@ -578,18 +708,20 @@
 
         <div class="section-inner">
 
-            <h2 class="section-title">About</h2>
+            <h2 class="section-title">
+                About
+            </h2>
 
             <div class="about-grid">
 
                 <div class="about-card">
 
-                    <h3>Engineering Focus</h3>
+                    <h3>Background</h3>
 
                     <p>
-                        Focused on CAE, finite element analysis, CFD, explicit
-                        dynamics, structural analysis, crashworthiness, and
-                        simulation-based mechanical engineering.
+                        My academic work has focused on computational mechanics
+                        and engineering simulation, with projects covering
+                        structural analysis, CFD, vibration, and crashworthiness.
                     </p>
 
                 </div>
@@ -597,14 +729,12 @@
 
                 <div class="about-card">
 
-                    <h3>Project Focus</h3>
+                    <h3>Engineering Focus</h3>
 
                     <p>
-                        This portfolio highlights my crashworthiness analysis
-                        of a steel automotive crash box using LS-DYNA, with
-                        emphasis on finite element model development, impact
-                        simulation, deformation behaviour, and crashworthiness
-                        evaluation.
+                        Focused on CAE, finite element analysis, CFD, explicit
+                        dynamics, crashworthiness, and simulation-based
+                        mechanical engineering.
                     </p>
 
                 </div>
@@ -624,21 +754,23 @@
 
         <div class="section-inner">
 
+
+            <!-- PROJECT TITLE -->
+
             <div class="project-header">
 
-                <h2 class="section-title">Featured Project</h2>
+                <h2 class="section-title">
+                    Featured Project
+                </h2>
 
                 <h3>
-                    Axial Impact Crashworthiness Analysis of Steel Automotive
-                    Crash Box
+                    Axial Impact Crashworthiness Analysis of Steel Automotive Crash Box
                 </h3>
 
             </div>
 
 
-            <!-- =========================
-                 PROBLEM & OBJECTIVE
-            ========================= -->
+            <!-- PROBLEM / OBJECTIVE -->
 
             <div class="problem-grid">
 
@@ -682,13 +814,13 @@
             </div>
 
 
-            <!-- =========================
-                 FE MODEL DEVELOPMENT
-            ========================= -->
+            <!-- FE MODEL DEVELOPMENT -->
 
             <div class="fe-section">
 
-                <h3>FE Model Development</h3>
+                <h3>
+                    FE Model Development
+                </h3>
 
                 <p class="fe-description">
                     The crash box was developed as a finite element model
@@ -698,20 +830,8 @@
                 </p>
 
 
-                <ul class="fe-points">
-
-                    <li>Crash box FE model</li>
-
-                    <li>Axial impact simulation setup</li>
-
-                    <li>Mapped / O-grid mesh around trigger region</li>
-
-                    <li>Fixed bottom edge</li>
-
-                </ul>
-
-
                 <div class="fe-images">
+
 
                     <div class="image-card">
 
@@ -720,8 +840,13 @@
                             alt="Crash box finite element model">
 
                         <div class="image-caption">
-                            <strong>Crash Box FE Model</strong>
+
+                            <strong>
+                                Crash Box FE Model
+                            </strong>
+
                             Finite element model of the crash box.
+
                         </div>
 
                     </div>
@@ -734,8 +859,13 @@
                             alt="Axial impact simulation setup">
 
                         <div class="image-caption">
-                            <strong>Axial Impact Simulation Setup</strong>
+
+                            <strong>
+                                Axial Impact Simulation Setup
+                            </strong>
+
                             Impactor and boundary-condition setup for axial impact.
+
                         </div>
 
                     </div>
@@ -745,11 +875,16 @@
 
                         <img
                             src="images/mesh-hole-trigger.png"
-                            alt="Mapped O-grid mesh around circular hole trigger">
+                            alt="Mapped O-grid mesh around trigger region">
 
                         <div class="image-caption">
-                            <strong>Mapped / O-grid Mesh</strong>
+
+                            <strong>
+                                Mapped / O-grid Mesh
+                            </strong>
+
                             Local mesh refinement around the trigger region.
+
                         </div>
 
                     </div>
@@ -759,13 +894,13 @@
             </div>
 
 
-            <!-- =========================
-                 EXPLICIT SIMULATION
-            ========================= -->
+            <!-- EXPLICIT SIMULATION -->
 
             <div class="explicit-section">
 
-                <h3>Explicit Simulation</h3>
+                <h3>
+                    Explicit Simulation
+                </h3>
 
                 <p class="explicit-intro">
                     The crashworthiness analysis was performed using the
@@ -776,15 +911,31 @@
 
                 <div class="explicit-grid">
 
+
                     <div class="explicit-card">
 
-                        <h4>Simulation Approach</h4>
+                        <h4>
+                            Simulation Approach
+                        </h4>
 
                         <ul>
-                            <li>Explicit dynamic analysis</li>
-                            <li>Axial impact loading</li>
-                            <li>Contact-based interaction</li>
-                            <li>Progressive crushing response</li>
+
+                            <li>
+                                Explicit dynamic analysis
+                            </li>
+
+                            <li>
+                                Axial impact loading
+                            </li>
+
+                            <li>
+                                Contact-based interaction
+                            </li>
+
+                            <li>
+                                Progressive crushing response
+                            </li>
+
                         </ul>
 
                     </div>
@@ -792,13 +943,28 @@
 
                     <div class="explicit-card">
 
-                        <h4>Response Evaluated</h4>
+                        <h4>
+                            Response Evaluated
+                        </h4>
 
                         <ul>
-                            <li>Deformation behaviour</li>
-                            <li>Crushing force response</li>
-                            <li>Energy absorption</li>
-                            <li>Crashworthiness performance</li>
+
+                            <li>
+                                Deformation behaviour
+                            </li>
+
+                            <li>
+                                Crushing force response
+                            </li>
+
+                            <li>
+                                Energy absorption
+                            </li>
+
+                            <li>
+                                Crashworthiness performance
+                            </li>
+
                         </ul>
 
                     </div>
@@ -808,13 +974,13 @@
             </div>
 
 
-            <!-- =========================
-                 TRIGGER CONFIGURATIONS
-            ========================= -->
+            <!-- TRIGGER CONFIGURATIONS -->
 
             <div class="trigger-section">
 
-                <h3>Trigger Configurations</h3>
+                <h3>
+                    Trigger Configurations
+                </h3>
 
                 <p class="trigger-description">
                     Circular hole triggers of different diameters were
@@ -835,13 +1001,13 @@
             </div>
 
 
-            <!-- =========================
-                 CRASHWORTHINESS EVALUATION
-            ========================= -->
+            <!-- RESULTS -->
 
             <div class="results-section">
 
-                <h3>Crashworthiness Evaluation</h3>
+                <h3>
+                    Crashworthiness Evaluation
+                </h3>
 
                 <p class="results-description">
                     The crash-box configurations were evaluated using the
@@ -854,7 +1020,77 @@
 
                     <img
                         src="images/force-displacement.png"
-                        alt="Crushing force versus displacement response for crash box configurations">
+                        alt="Crushing force versus displacement response">
+
+                </div>
+
+
+                <div class="metrics">
+
+
+                    <div class="metric">
+
+                        <strong>
+                            IE
+                        </strong>
+
+                        <span>
+                            Internal Energy
+                        </span>
+
+                    </div>
+
+
+                    <div class="metric">
+
+                        <strong>
+                            SEA
+                        </strong>
+
+                        <span>
+                            Specific Energy Absorption
+                        </span>
+
+                    </div>
+
+
+                    <div class="metric">
+
+                        <strong>
+                            Fmax
+                        </strong>
+
+                        <span>
+                            Peak Crushing Force
+                        </span>
+
+                    </div>
+
+
+                    <div class="metric">
+
+                        <strong>
+                            MCF
+                        </strong>
+
+                        <span>
+                            Mean Crushing Force
+                        </span>
+
+                    </div>
+
+
+                    <div class="metric">
+
+                        <strong>
+                            CFE
+                        </strong>
+
+                        <span>
+                            Crushing Force Efficiency
+                        </span>
+
+                    </div>
 
                 </div>
 
@@ -865,15 +1101,15 @@
     </section>
 
 
-    <!-- =========================
-         KEY FINDINGS
-    ========================= -->
+    <!-- KEY FINDINGS -->
 
     <section id="findings">
 
         <div class="section-inner">
 
-            <h2 class="section-title">Key Findings</h2>
+            <h2 class="section-title">
+                Key Findings
+            </h2>
 
 
             <div class="findings">
@@ -883,27 +1119,15 @@
                     and promoted more controlled, progressive deformation.
                 </div>
 
-
                 <div class="finding">
                     The Ø12 mm and Ø14 mm trigger configurations showed a
                     favourable balance between energy absorption and
                     crushing behaviour.
                 </div>
 
-
                 <div class="finding">
                     Larger trigger sizes showed increased structural
                     weakening and less stable deformation.
-                </div>
-
-
-                <div class="finding">
-                    Crashworthiness performance was assessed using
-                    <strong>Internal Energy (IE)</strong>,
-                    <strong>Specific Energy Absorption (SEA)</strong>,
-                    <strong>Peak Crushing Force (Fmax)</strong>,
-                    <strong>Mean Crushing Force (MCF)</strong>, and
-                    <strong>Crushing Force Efficiency (CFE)</strong>.
                 </div>
 
             </div>
@@ -913,15 +1137,16 @@
     </section>
 
 
-    <!-- =========================
-         TECHNICAL SKILLS
-    ========================= -->
+    <!-- TECHNICAL SKILLS -->
 
     <section id="skills">
 
         <div class="section-inner">
 
-            <h2 class="section-title">Technical Skills</h2>
+            <h2 class="section-title">
+                Technical Skills
+            </h2>
+
 
             <div class="skills">
 
@@ -945,16 +1170,13 @@
     </section>
 
 
-    <!-- =========================
-         FOOTER
-    ========================= -->
+    <!-- FOOTER -->
 
     <footer>
-
         © 2026 Vishal Ranjan Gupta · CAE Engineer
-
     </footer>
 
 
 </body>
+
 </html>
